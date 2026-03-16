@@ -22,10 +22,11 @@ body {
 
   width: 400px;
   height: 400px;
-  background-color:rgb(238, 243, 248);
+  background-color:rgb(212, 212, 212);
 
   border-radius: 50%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border: none;
 }
 .container > h2 {
   font-family:Arial, Helvetica, sans-serif;
@@ -54,7 +55,8 @@ body {
   gap: 20px;
 }
 
-.btn {
+
+.Start {
   width: 80px;
   height: 30px;
   border-radius: 10px;
@@ -67,12 +69,48 @@ body {
 
   transition: 0.5s;
 }
-
-.btn:hover {
-    background-color: #000000c2;
-
+.Start:hover {
+background-color: #000000c2;
 }
+
+
+.Stop {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+
+  background-color: #386958;
+  color: rgb(228, 227, 227);
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+.Stop:hover {
+  background-color: #000000c2;
+}
+
+
+.Reset {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+
+  background-color: #386958;
+  color: rgb(228, 227, 227);
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+.Reset:hover {
+    background-color: #000000c2;
+    
+  }
 
 .time {
   letter-spacing: 10px;
+   font-family: "Roboto", sans-serif;
 }
