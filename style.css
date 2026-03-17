@@ -11,6 +11,8 @@ body {
   height: 100vh;
 
   background-color: #397964a9;
+
+  background: linear-gradient(135deg, #80e7c3, #2c5346, #19332a );
 }
 
 
@@ -45,6 +47,10 @@ body {
 
  box-shadow: inset 4px 4px 8px rgba(0,0,0,0.4),
              inset -4px -4px 8px rgba(236, 236, 236, 0.8);
+
+  border: 1px solid #cfd7e4;
+  background: linear-gradient(to bottom, #ced6e9, #e5e7eb);
+
   
  width: 350px;
  height: 55px;
