@@ -1,3 +1,9 @@
+
+
+
+
+
+
 let millisseconds = 0
 let seconds = 0
 let minutes = 0
@@ -10,6 +16,28 @@ let time = document.querySelector(".time")
 const btnStart = document.querySelector(".Start")
 const btnStop = document.querySelector(".Stop")
 const btnReset = document.querySelector(".Reset")
+
+const tempoSalvo = localStorage.getItem("stopwatch")
+
+if (tempoSalvo) {
+  const data = JSON.parse(tempoSalvo)
+
+  hours = data.h
+  minutes = data.m
+  seconds = data.s
+  millisseconds = data.ms
+
+  updateDisplay()
+}
+function saveTime () {
+  const data = {
+    h: hours,
+    m: minutes,
+    s: seconds,
+    ms: millisseconds
+  }
+  localStorage.setItem("stopwatch", JSON.stringify(data))
+}
 
 function Start() {
   if (timer !== null) return 
@@ -32,7 +60,9 @@ function Start() {
     }
 
     updateDisplay()
+    saveTime()
   }, 10)
+
 }
 
 function Stop () {
@@ -49,6 +79,7 @@ function Reset () {
   minutes = 0
   hours = 0
 
+  localStorage.removeItem("stopwatch")
   updateDisplay()
 }
 
